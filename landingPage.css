@@ -377,7 +377,7 @@ line-height: 150%;
     line-height: 26px; /* 162.5% */
     text-transform: uppercase;
 }
-
+/* 
 .section-4{
     display: flex;
     width: 1440px;
@@ -401,4 +401,866 @@ line-height: 150%;
     justify-content: center;
     align-items: center;
     gap: 60px;
+} */
+/*  */
+/* --- Main Section Wrapper --- */
+        .section-4 {
+            max-width: 1200px;
+            margin: 0 auto;
+            /* padding: ; */
+        }
+
+        /* --- Top Section (Flex Container) --- */
+        .sec-1 {
+            display: flex;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        /* --- LEFT SIDE (Text + Main Image) --- */
+        .main1 {
+            flex: 0 0 45%; /* Takes up roughly 45% width */
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Typography for Left Side */
+        .sub-title {
+            color: #0066ff; /* Blue accent color */
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .main-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            color: #000;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1rem;
+            max-width: 90%;
+        }
+
+        /* Main Image Styling */
+        .main-image-container {
+            position: relative;
+            margin-top: 20px;
+            width: 100%;
+            height: 400px; /* Adjust height as needed */
+        }
+
+        /* The blue outline effect behind the image */
+        .image-outline {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #0066ff;
+            border-top-left-radius: 150px; /* Curve matching image */
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* The actual image placeholder */
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: #eee; /* Light gray placeholder */
+            border-top-left-radius: 150px; /* The specific curve */
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- RIGHT SIDE (Feature Grid) --- */
+        .main2 {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 Columns */
+            gap: 20px;
+            align-content: start; /* Align items to top */
+        }
+
+        /* Individual Feature Card */
+        .feature-card {
+            background-color: #f9f9f9; /* Light background for cards */
+            padding: 30px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            transition: transform 0.2s;
+        }
+        
+        /* Stagger effect: Push the second column down slightly to match image layout */
+        .main2 > :nth-child(even) {
+            margin-top: 40px; 
+        }
+        .main2 > :nth-child(odd) {
+            margin-bottom: 40px;
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background-color: #0066ff; /* Blue icon bg */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        .card-text {
+            font-weight: 600;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        /* --- Bottom Section (Quote) --- */
+        .sec-2 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #000;
+            padding-top: 40px;
+            border-top: 1px solid #eee; /* Optional separator */
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 900px) {
+            .sec-1 {
+                flex-direction: column;
+            }
+            .main1, .main2 {
+                flex: none;
+                width: 100%;
+            }
+            .main-image-container {
+                height: 300px;
+            }
+            .main2 > :nth-child(even) {
+                margin-top: 0; /* Remove stagger on mobile */
+            }
+            .main2 > :nth-child(odd) {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: 600px) {
+             .main2 {
+                grid-template-columns: 1fr; /* Stack cards on very small screens */
+             }
+        }
+/* --- SECTION 5 STYLES --- */
+
+.section-5 {
+    background-color: #003366; /* Deep Blue Background */
+    padding: 80px 40px;
+    color: white;
+}
+
+.providers-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: center; /* Vertically center the content */
+}
+
+/* --- Left Text Column --- */
+.text-content {
+    flex: 1; /* Takes up 1 part of space */
+    padding-right: 20px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.section-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 35px;
+    max-width: 90%;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid white;
+    border-radius: 50px; /* Pill shape */
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: #003366;
+}
+
+/* --- Provider Cards --- */
+.provider-card {
+    flex: 1; /* Each card takes up 1 part */
+    position: relative;
+    height: 500px; /* Fixed height to match design */
+    border-radius: 12px;
+    overflow: hidden; /* Ensures image stays within rounded corners */
+    background-color: #ccc; /* Fallback color if image missing */
+}
+
+/* Background Image Handling */
+.card-image-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    /* You can replace this with an actual <img> tag if preferred, 
+       just ensure the img has width:100% height:100% object-fit:cover */
+}
+
+/* White Info Box Overlay */
+.card-info {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px; /* Creates the margin around the box */
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.provider-name {
+    font-family: 'Playfair Display', serif;
+    color: #003366; /* Blue text */
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.provider-title {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.read-bio {
+    font-family: 'Inter', sans-serif;
+    color: #0066ff; /* Lighter blue for link */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.read-bio:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .providers-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .text-content {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-right: 0;
+    }
+    
+    .section-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .provider-card {
+        height: 450px; /* Slightly shorter on mobile if needed */
+    }
+}
+
+/*  */
+/* --- SECTION 6: TESTIMONIALS --- */
+
+.section-6 {
+    background-color: white;
+    padding: 80px 40px;
+}
+
+.reviews-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header Area --- */
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align bottom of text with button */
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.header-left {
+    max-width: 60%;
+}
+
+.reviews-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.reviews-desc {
+    font-family: 'Inter', sans-serif;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.review-btn {
+    background-color: #003366; /* Deep Blue */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.review-btn:hover {
+    background-color: #002244;
+}
+
+/* --- Slider/Cards Area --- */
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Arrows */
+.slider-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.slider-arrow:hover {
+    opacity: 0.7;
+}
+
+/* Individual Cards */
+.review-card {
+    background-color: #f2f2f2; /* Light Gray Background */
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 350px; /* Uniform height */
+}
+
+.reviewer-name {
+    font-family: 'Playfair Display', serif;
+    color: #0066ff; /* Bright Blue */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.review-text {
+    font-family: 'Inter', sans-serif;
+    color: #555;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1; /* Pushes the quote icon to bottom */
+    margin-bottom: 30px;
+}
+
+.quote-icon {
+    margin-top: auto;
+    opacity: 0.8;
+}
+
+/* --- Pagination Dots --- */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #0066ff; /* Active blue dot */
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+    .reviews-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-left {
+        max-width: 100%;
+    }
+    
+    .slider-arrow {
+        display: none; /* Hide arrows on mobile for cleaner look */
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+    
+    .review-card {
+        min-height: auto; /* Let height adjust to text */
+    }
+}
+
+/* --- SECTION 7: APPOINTMENT FORM --- */
+
+.section-7 {
+    /* Replace with your actual background image */
+    background-image: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.6)), url("Assets/Big-images/page-7.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    
+}
+
+.contact-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+/* --- Left Side: Info --- */
+.contact-info {
+    flex: 1;
+    color: white;
+}
+
+.contact-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.badge-container {
+    margin-bottom: 25px;
+}
+
+.medicaid-badge {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.contact-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    max-width: 90%;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* --- Right Side: Form Card --- */
+.contact-form-card {
+    flex: 0 0 500px; /* Fixed width for the card */
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.form-title {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.appointment-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: span 2; /* Make element span full width */
+}
+
+/* Input Styles */
+input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px; /* Pill shape for inputs */
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Specific radius for textarea (less rounded corners) */
+textarea {
+    border-radius: 20px;
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #003366;
+}
+
+/* Button Styles */
+.submit-btn {
+    background-color: #003366; /* Deep Blue */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #002244;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    
+    .contact-form-card {
+        width: 100%;
+        flex: none;
+        padding: 30px;
+    }
+    
+    .contact-info {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .contact-desc {
+        margin: 0 auto 15px auto;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .appointment-form {
+        grid-template-columns: 1fr; /* Stack all inputs on mobile */
+    }
+    
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}
+
+/*  */
+/* --- SECTION 8: AFFILIATIONS --- */
+.section-8 {
+    background-color: #003366; /* Deep Blue */
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.affiliations-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.affiliations-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.logos-grid {
+    display: flex;
+    justify-content: space-between; /* Spreads logos evenly */
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on mobile */
+    gap: 30px;
+}
+
+/* Placeholder styling for logos - Remove/adjust when you add real images */
+.logo-placeholder {
+    color: white;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px dashed rgba(255,255,255,0.3);
+    padding: 10px 20px;
+    min-width: 100px;
+}
+
+/* --- MAIN FOOTER --- */
+.main-footer {
+    background-color: #282828; /* Dark Charcoal/Black */
+    color: white;
+    position: relative; /* For floating badge positioning */
+    padding-top: 80px;
+}
+
+/* Floating Badge Styling */
+.floating-badge {
+    position: absolute;
+    top: -40px; /* Pulls it up halfway out of the footer */
+    right: 10%; /* Adjust horizontal position */
+    z-index: 10;
+}
+
+.badge-placeholder svg {
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    background-color: #282828; /* Matches footer bg so it looks cutout if needed */
+    border-radius: 50%;
+}
+
+/* Footer Content Grid */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 60px 40px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr; /* Col 1 is slightly wider */
+    gap: 50px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography */
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc; /* Light gray text */
+    max-width: 90%;
+}
+
+.footer-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+/* Contact List */
+.footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #0066ff; /* Blue circle background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Social Area */
+.social-area {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.social-icon svg {
+    vertical-align: middle;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover svg {
+    transform: scale(1.1);
+}
+
+/* --- BOTTOM BAR --- */
+.footer-bottom {
+    border-top: 1px dotted #555; /* Subtle dotted separator */
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #aaa;
+    font-family: 'Inter', sans-serif;
+}
+
+.legal-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.legal-links a:hover {
+    color: white;
+}
+
+.separator {
+    margin: 0 10px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .logos-grid {
+        justify-content: center; /* Center logos on tablet */
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr; /* Stack footer columns */
+        gap: 40px;
+    }
+    
+    .floating-badge {
+        position: static; /* Reset position on mobile */
+        margin: 0 auto 30px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 }
