@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container{
+    max-width: 100%;
+    height: 140vh;
+    /* background-image: url("Assets/Big-images/group-of-multiracial-young-people-hugging-outdoors-2025-03-06-09-21-14-utc\ 1.png"); */
+    background: 
+        linear-gradient(180deg, rgba(255, 255, 255, 0.40) 8.28%, rgba(0, 59, 109, 0.00) 40.37%, rgba(0, 59, 109, 0.80) 64.52%),
+        url("Assets/Big-images/group-of-multiracial-young-people-hugging-outdoors-2025-03-06-09-21-14-utc\ 1.png");
+    background-size: contain;
+    background-repeat: no-repeat;    
+    background-position: center center;
+    
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 8.28%, rgba(0, 59, 109, 0.00) 40.37%, rgba(0, 59, 109, 0.80) 64.52%); */
+}
+
+/* 
+.inner-container1{
+    width: 100%;
+}
+.inner-container2{
+    width: 100%;
+    
+} */
+.inner-container3{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 60px;
+}
+.inner-container2{
+    /* border: 1px solid black; */
+    padding: 500px 60px 60px 60px;
+
+}
+.logo{
+    /* background-image: url("Assets/Header-icon/Logo-head.png"); */
+    width: 189.167px;
+    height: 70px;
+}
+.right-nav{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.number,.mail{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.phone-icon,.mail-icon{
+    color: white;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    background: #003B6D;
+}
+.phone,.mail-text{
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+font-weight: 400;
+line-height: 150%;
+}
+.appointment-btn{
+    background-color: #004071; 
+    color: #ffffff;
+    border: none;
+    padding: 20px 60px; /* Vertical and Horizontal padding */
+    border-radius: 100px; /* Large radius creates the pill shape */
+    cursor: pointer;
+    
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 162.5% */
+    text-transform: uppercase;
+}
+
+
+.inner-container4{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 10%;
+}
+.para-1{
+    color: #FFF;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    /* Headings/Regular/H1 Regular */
+    font-family: "Jacques Francois";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 78px */
+    text-transform: capitalize;
+}
+.para-2{
+    color: #FFF;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    /* Body Text/Regular Body/20 Regular */
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+}
+.para-3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0px 0px 0px;
+}
+.consultant{
+    background-color: #4396d6; 
+    color: #ffffff;
+    border: none;
+    padding: 15px 50px; /* Vertical and Horizontal padding */
+    border-radius: 100px; /* Large radius creates the pill shape */
+    cursor: pointer;
+    
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 162.5% */
+    text-transform: uppercase;
+}
+.call-us{
+    background-color: transparent;
+    display: flex;
+    padding: 1rem 26px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 2px solid  #FFF;
+    color: #FFF;
+    font-weight: bolder;
+}
+
+.consultant:hover , .call-us:hover{
+    background-color: #FFF;
+    color: #0D5ED7;
+    cursor: pointer;
+}
