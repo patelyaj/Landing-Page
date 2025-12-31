@@ -35,7 +35,7 @@
 }
 .inner-container2{
     /* border: 1px solid black; */
-    padding: 500px 60px 60px 60px;
+    padding: 380px 60px 0px 60px;
 
 }
 .logo{
@@ -105,7 +105,7 @@ line-height: 150%;
     font-variant-numeric: lining-nums proportional-nums;
     /* Headings/Regular/H1 Regular */
     font-family: "Jacques Francois";
-    font-size: 60px;
+    font-size: 45px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 78px */
@@ -116,11 +116,11 @@ line-height: 150%;
     text-align: center;
     font-variant-numeric: lining-nums proportional-nums;
     /* Body Text/Regular Body/20 Regular */
-    font-family: Rubik;
-    font-size: 20px;
+     font-family: "Rubik", sans-serif;
+    font-size: 17px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 30px */
+    line-height: 150%; 
 }
 .para-3{
     display: flex;
@@ -138,7 +138,7 @@ line-height: 150%;
     cursor: pointer;
     
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: Rubik;
+    font-family: "Rubik", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -161,4 +161,244 @@ line-height: 150%;
     background-color: #FFF;
     color: #0D5ED7;
     cursor: pointer;
+}
+
+.section-2{
+    max-width: 100%;
+    display: flex;
+    padding: 100px 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    /* align-self: stretch; */
+    flex-direction: row;
+}
+
+.img-div{
+    /* position: absolute; */
+
+}
+
+.img-box{
+    width: 630px;
+    height: 458px;
+    background-image: url("Assets/Big-images/Rectangle\ 19.png");
+
+    
+}
+.img-b{
+    position: absolute;
+    z-index: 1;
+}
+.border-box{
+    position: relative;
+    width: 630px;
+    height: 458px;
+    border: 2px solid #136CFC;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+
+    top: -15px;
+    left: -15px;
+    z-index: 0;
+}   
+.text-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+}
+.description-1{
+    color:  #555;
+    font-variant-numeric: lining-nums proportional-nums;
+
+    /* Body Text/Regular Body/16 Regular */
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    
+}
+.title{
+    color:  #136CFC;
+    font-family: "Jacques Francois";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 42px */
+}
+.subtitle{
+    color:  #000;
+
+/* Headings/Regular/H3 Regular */
+    font-family: "Jacques Francois";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 60px */
+    text-transform: capitalize;
+}
+.description-1 p{
+    margin-bottom: 10px;
+}
+
+/* section - 3 */
+.section-3{
+    display: flex;
+    padding: 100px 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+    background: #F2F2F2;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.head-1{
+    color: var(--Brand-Colors-Color-2, #136CFC);
+    text-align: center;
+
+    /* Headings/Regular/H5 Regular */
+    font-family: "Jacques Francois";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 42px */
+}
+.head-2{
+    color: var(--General-Colors-Black, #000);
+    text-align: center;
+
+    /* Headings/Regular/H3 Regular */
+    font-family: "Jacques Francois";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 60px */
+    text-transform: capitalize;
+}
+
+.img-b-1{
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    z-index: 1;
+    /* border: 2px solid #136CFC; */
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+
+.img-box-1{
+    width: 700px;
+    height: 700px;
+    /* background-image: url("Assets/Big-images/7dd45183440edd5d4ef4be8b1ae8ede618c8730d.jpg");     */
+}
+
+.border-box-2{
+    position: relative;
+    width: 700px;
+    height: 700px;
+    border: 2px solid #136CFC;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    top: 15px;
+    left: 15px;
+    z-index: 0;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+}
+.bullet{
+    width: 24px;
+    height: 24px;
+}
+
+.content{
+    color:  #000;
+    font-variant-numeric: lining-nums proportional-nums;
+
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 162.5% */
+}
+.list-item{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+.des-1, .des-2{
+    color: var(--General-Colors-Body-Text-Color, #555);
+    font-variant-numeric: lining-nums proportional-nums;
+
+    /* Body Text/Regular Body/16 Regular */
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+}
+.appointment-btn-1{
+    background-color: #004071; 
+    color: #ffffff;
+    border: none;
+    padding: 20px 60px; /* Vertical and Horizontal padding */
+    border-radius: 100px; /* Large radius creates the pill shape */
+    cursor: pointer;
+    
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 162.5% */
+    text-transform: uppercase;
+}
+
+.section-4{
+    display: flex;
+    width: 1440px;
+    padding: 100px 60px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.main1{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.main2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
 }
