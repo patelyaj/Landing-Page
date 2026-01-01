@@ -172,6 +172,12 @@ line-height: 150%;
     gap: 60px;
     /* align-self: stretch; */
     flex-direction: row;
+    
+}
+@media (max-width: 900px) {
+    .section-2{
+       flex-wrap: wrap;
+    }
 }
 
 .img-div{
@@ -265,7 +271,6 @@ line-height: 150%;
 .head-1{
     color: var(--Brand-Colors-Color-2, #136CFC);
     text-align: center;
-
     /* Headings/Regular/H5 Regular */
     font-family: "Jacques Francois";
     font-size: 28px;
@@ -287,18 +292,33 @@ line-height: 150%;
 }
 
 .img-b-1{
-    width: 700px;
-    height: 700px;
-    position: absolute;
-    z-index: 1;
-    /* border: 2px solid #136CFC; */
-    border-top-left-radius: 200px;
-    border-bottom-right-radius: 200px;
+
+            width: 100%;
+            height: 100%;
+            background-color: #eee; 
+            border-top-left-radius: 150px; 
+            border-bottom-right-radius: 200px;
+            position: absolute;
+            z-index: 1;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            /* font-size: 0.9rem; */
 }
 
 .img-box-1{
-    width: 700px;
-    height: 700px;
+    position: relative;
+            top: -15px;
+            left: -15px;
+            width: 100%;
+            height: 100%;
+            /* border: 2px solid #0066ff; */
+            border-top-left-radius: 150px;
+            border-bottom-right-radius: 200px;
+            z-index: 0;
+    
     /* background-image: url("Assets/Big-images/7dd45183440edd5d4ef4be8b1ae8ede618c8730d.jpg");     */
 }
 
@@ -320,7 +340,12 @@ line-height: 150%;
     justify-content: center;
     align-items: center;
     gap: 60px;
-
+    /* flex-wrap: wrap; */
+}
+@media (max-width: 900px) {
+    .main{
+       flex-wrap: wrap;
+    }
 }
 .bullet{
     width: 24px;
@@ -343,17 +368,18 @@ line-height: 150%;
     align-items: flex-start;
     gap: 10px;
 }
+
 .des-1, .des-2{
     color: var(--General-Colors-Body-Text-Color, #555);
     font-variant-numeric: lining-nums proportional-nums;
 
-    /* Body Text/Regular Body/16 Regular */
     font-family: "Rubik", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 24px */
+    line-height: 150%; 
 }
+
 .text{
     display: flex;
     flex-direction: column;
@@ -405,9 +431,9 @@ line-height: 150%;
 /*  */
 /* --- Main Section Wrapper --- */
         .section-4 {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
-            /* padding: ; */
+            padding: 100px 60px;
         }
 
         /* --- Top Section (Flex Container) --- */
@@ -417,19 +443,18 @@ line-height: 150%;
             margin-bottom: 60px;
         }
 
-        /* --- LEFT SIDE (Text + Main Image) --- */
+     
         .main1 {
-            flex: 0 0 45%; /* Takes up roughly 45% width */
+            /* flex: 0 0 45%;  */
             display: flex;
             flex-direction: column;
             gap: 30px;
         }
 
-        /* Typography for Left Side */
         .sub-title {
             color: #0066ff; /* Blue accent color */
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 2rem;
         }
 
         .main-heading {
@@ -454,7 +479,7 @@ line-height: 150%;
             height: 400px; /* Adjust height as needed */
         }
 
-        /* The blue outline effect behind the image */
+   
         .image-outline {
             position: absolute;
             top: -15px;
@@ -462,17 +487,19 @@ line-height: 150%;
             width: 100%;
             height: 100%;
             border: 2px solid #0066ff;
-            border-top-left-radius: 150px; /* Curve matching image */
+            border-top-left-radius: 150px;
+            border-bottom-right-radius: 200px;
             z-index: 0;
-            pointer-events: none;
+            /* pointer-events: none; */
         }
 
-        /* The actual image placeholder */
+        
         .image-placeholder {
             width: 100%;
             height: 100%;
-            background-color: #eee; /* Light gray placeholder */
-            border-top-left-radius: 150px; /* The specific curve */
+            background-color: #eee; 
+            border-top-left-radius: 150px; 
+            border-bottom-right-radius: 200px;
             position: relative;
             z-index: 1;
             overflow: hidden;
@@ -486,7 +513,7 @@ line-height: 150%;
         .image-placeholder img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            /* object-fit: cover; */
         }
 
         /* --- RIGHT SIDE (Feature Grid) --- */
@@ -542,7 +569,7 @@ line-height: 150%;
             font-size: 1.5rem;
             color: #000;
             padding-top: 40px;
-            border-top: 1px solid #eee; /* Optional separator */
+    
             max-width: 900px;
             margin: 0 auto;
         }
@@ -560,7 +587,7 @@ line-height: 150%;
                 height: 300px;
             }
             .main2 > :nth-child(even) {
-                margin-top: 0; /* Remove stagger on mobile */
+                margin-top: 0; 
             }
             .main2 > :nth-child(odd) {
                 margin-bottom: 0;
@@ -568,125 +595,159 @@ line-height: 150%;
         }
         @media (max-width: 600px) {
              .main2 {
-                grid-template-columns: 1fr; /* Stack cards on very small screens */
+                grid-template-columns: 1fr;
              }
         }
 /* --- SECTION 5 STYLES --- */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* SECTION */
 .section-5 {
-    background-color: #003366; /* Deep Blue Background */
-    padding: 80px 40px;
-    color: white;
+  background-color: #083f6b;
+  padding: 100px 60px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
 }
-
-.providers-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+.right-provider{
     display: flex;
-    gap: 30px;
-    align-items: center; /* Vertically center the content */
+    flex-direction: row;
 }
-
-/* --- Left Text Column --- */
-.text-content {
-    flex: 1; /* Takes up 1 part of space */
-    padding-right: 20px;
+/* LEFT TEXT */
+.text-content-1 {
+  max-width: 420px;
+  color: #fff;
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    line-height: 1.2;
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .section-desc {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    opacity: 0.9;
-    margin-bottom: 35px;
-    max-width: 90%;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #d9e6f2;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 12px 28px;
-    border: 1px solid white;
-    border-radius: 50px; /* Pill shape */
-    color: white;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: background 0.3s, color 0.3s;
+  display: inline-block;
+  padding: 12px 26px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: white;
-    color: #003366;
+  background: #fff;
+  color: #083f6b;
 }
 
-/* --- Provider Cards --- */
+/* RIGHT PROVIDERS */
+.right-provider {
+  display: flex;
+  gap: 30px;
+  /* flex-wrap: wrap; */
+}
+
+/* CARD */
 .provider-card {
-    flex: 1; /* Each card takes up 1 part */
-    position: relative;
-    height: 500px; /* Fixed height to match design */
-    border-radius: 12px;
-    overflow: hidden; /* Ensures image stays within rounded corners */
-    background-color: #ccc; /* Fallback color if image missing */
+  position: relative;
+  width: 320px;
+  height: 430px;
+  border-radius: 24px;
+  overflow: hidden;
 }
 
-/* Background Image Handling */
-.card-image-bg {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    /* You can replace this with an actual <img> tag if preferred, 
-       just ensure the img has width:100% height:100% object-fit:cover */
+/* IMAGE BACKGROUNDS */
+.card-image-bg-1,
+.card-image-bg-2 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
-/* White Info Box Overlay */
+/* Replace these URLs with real images */
+.card-image-bg-1 {
+  background-image: url("Assets/Big-images/4a744e269038012625a098d28a0698cbd028b94d.jpg");
+}
+
+.card-image-bg-2 {
+  background-image: url("Assets/Big-images/cfb9b62257b31de614d55e6c717c9bc08f934191.png ");
+}
+
+/* INFO CARD */
 .card-info {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px; /* Creates the margin around the box */
-    background-color: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
 }
 
 .provider-name {
-    font-family: 'Playfair Display', serif;
-    color: #003366; /* Blue text */
-    font-size: 1.4rem;
-    margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #083f6b;
+  margin-bottom: 6px;
 }
 
 .provider-title {
-    font-family: 'Inter', sans-serif;
-    color: #333;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
 }
 
 .read-bio {
-    font-family: 'Inter', sans-serif;
-    color: #0066ff; /* Lighter blue for link */
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
+  font-size: 14px;
+  color: #0066ff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.read-bio:hover {
-    text-decoration: underline;
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .section-5 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .right-provider {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .provider-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .section-title {
+    font-size: 34px;
+  }
 }
 
 /* --- Responsive Adjustments --- */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     .providers-wrapper {
         flex-direction: column;
         align-items: stretch;
@@ -704,9 +765,10 @@ line-height: 150%;
     }
 
     .provider-card {
-        height: 450px; /* Slightly shorter on mobile if needed */
+        height: 450px; 
+        background-size: cover;
     }
-}
+} */
 
 /*  */
 /* --- SECTION 6: TESTIMONIALS --- */
@@ -717,7 +779,7 @@ line-height: 150%;
 }
 
 .reviews-wrapper {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -725,18 +787,21 @@ line-height: 150%;
 .reviews-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* Align bottom of text with button */
+    align-items: flex-start; /* Align bottom of text with button */
     margin-bottom: 50px;
     gap: 20px;
+    flex-direction: row;
 }
 
 .header-left {
     max-width: 60%;
 }
-
+.header-right {
+    padding-top: 20px ;
+}
 .reviews-title {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #000;
     margin-bottom: 15px;
     line-height: 1.2;
@@ -745,12 +810,12 @@ line-height: 150%;
 .reviews-desc {
     font-family: 'Inter', sans-serif;
     color: #666;
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.6;
 }
 
 .review-btn {
-    background-color: #003366; /* Deep Blue */
+    background-color: #003366;
     color: white;
     padding: 12px 24px;
     border-radius: 50px;
@@ -890,7 +955,7 @@ line-height: 150%;
 }
 
 .contact-wrapper {
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -969,32 +1034,55 @@ line-height: 150%;
     gap: 20px;
 }
 
-.form-group {
+/* .form-group {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .form-group.full-width {
-    grid-column: span 2; /* Make element span full width */
+    grid-column: span 2; 
 }
+.select-group{
+    display: flex;
+    flex-direction: column;
+    /* padding-right: 10%; */
+    justify-content: start;
 
-/* Input Styles */
+    
+}
+.form-select{
+    /* position: relative;
+    left: -20px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    /* padding-right: 20px; */
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    width: 100%;    
+    
+}
+.form-placeholder{
+    color: #333;
+}
 input, select, textarea {
     width: 100%;
     padding: 15px;
     border: 1px solid #ddd;
-    border-radius: 30px; /* Pill shape for inputs */
+    border-radius: 30px;
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
-    color: #333;
+    /* color: #333; */
     outline: none;
-    transition: border-color 0.3s;
 }
 
-/* Specific radius for textarea (less rounded corners) */
+.select-group{
+    padding-left: 20px;
+}
+
 textarea {
-    border-radius: 20px;
-    resize: vertical;
+    border-radius: 5px;
 }
 
 input:focus, select:focus, textarea:focus {
@@ -1011,7 +1099,6 @@ input:focus, select:focus, textarea:focus {
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.3s;
     width: 100%;
     margin-top: 10px;
 }
@@ -1066,7 +1153,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .affiliations-wrapper {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -1091,7 +1178,7 @@ input:focus, select:focus, textarea:focus {
     opacity: 0.8;
     font-size: 0.9rem;
     font-weight: 600;
-    border: 1px dashed rgba(255,255,255,0.3);
+    /* border: 1px dashed rgba(255,255,255,0.3); */
     padding: 10px 20px;
     min-width: 100px;
 }
@@ -1120,7 +1207,7 @@ input:focus, select:focus, textarea:focus {
 
 /* Footer Content Grid */
 .footer-content {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 40px 60px 40px;
     display: grid;
@@ -1201,8 +1288,18 @@ input:focus, select:focus, textarea:focus {
     gap: 10px;
     color: #ccc;
     font-size: 0.9rem;
+    
 }
-
+.follow{
+    width: 30px;
+    height: 30px;
+    background-color: #0066ff; /* Blue circle background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
 .social-icon svg {
     vertical-align: middle;
     transition: transform 0.2s;
@@ -1214,16 +1311,17 @@ input:focus, select:focus, textarea:focus {
 
 /* --- BOTTOM BAR --- */
 .footer-bottom {
-    border-top: 1px dotted #555; /* Subtle dotted separator */
+    border-top: 1px dotted #474141; /* Subtle dotted separator */
     padding: 20px 40px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.85rem;
-    color: #aaa;
+    color: #e1d0d0;
     font-family: 'Inter', sans-serif;
+    background-color: #5a5656;
 }
 
 .legal-links a {
@@ -1264,3 +1362,4 @@ input:focus, select:focus, textarea:focus {
         text-align: center;
     }
 }
+
